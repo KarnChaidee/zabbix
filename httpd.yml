@@ -1,0 +1,14 @@
+---
+- hosts: zabbix
+  tasks:
+  - name: httpd installation
+    dnf:
+      name:
+        - httpd
+      state: latest
+
+  - name: Start httpd
+    shell: "systemctl start httpd"
+
+  - name: Ensure MySQL is Enabled
+    service: name=httpd state=started enabled=true
