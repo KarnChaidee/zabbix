@@ -1,0 +1,5 @@
+[aggregate]
+192.168.10.157 mongodb_master=True zookeeper_id=1
+
+[collector]
+192.168.10.157
